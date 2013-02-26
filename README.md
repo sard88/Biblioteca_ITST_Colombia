@@ -32,5 +32,14 @@ Para solicitar el prestamo de un libro tiene que estar registrado el usuario en 
 disponible.
 El usuario solicita el prestamo al encargado de la biblioteca y el encargado registra el prestamo en el sistema.
 
+Las multas:
+===========
+El sistema generara las multas cuando el usuario no haga entrega de los libros en la fecha estipulada en el momento del 
+prestamo.
+El usuario tendra que cancelar dicha multa en la tesoreria del colegio la cual generara un recibo de pago que el 
+estudiante debera entragar en la biblioteca para que su multa sea dada de alta en el sistema.
+Dicha multa incrementara en 500 pesos colombianos su valor por cada dia que pase sin ser cancelada.
+
+
 //Este documento esta sujeto a verificación y correción tanto de la maestra como del personal del colegio con los 
 cuales tendremos contacto en el transcurso de la semana. Sergio Andrés Rueda y Carlos Andrés Orjuela

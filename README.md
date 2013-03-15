@@ -40,6 +40,10 @@ El usuario tendra que cancelar dicha multa en la tesoreria del colegio la cual g
 estudiante debera entragar en la biblioteca para que su multa sea dada de alta en el sistema.
 Dicha multa incrementara en 500 pesos colombianos su valor por cada dia que pase sin ser cancelada.
 
+La editorial, el autor, el tema
+====================================
+Al momento de ingresar un nuevo libro en el sistema, el usuario debera seleccionar desde un catalogo la editorial, el 
+autor y el tema del libro.
 
 //Este documento esta sujeto a verificación y correción tanto de la maestra como del personal del colegio con los 
 cuales tendremos contacto en el transcurso de la semana. Sergio Andrés Rueda y Carlos Andrés Orjuela

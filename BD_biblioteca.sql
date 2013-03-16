@@ -31,7 +31,6 @@ CREATE TABLE  estadolibro
 CREATE TABLE  libro 
    (	id_libro int NOT NULL AUTO_INCREMENT, 
 	nombre_libro varchar(100) NOT NULL, 
-	cantidad int NOT NULL,
 	paginas_libro int NOT NULL,
 	codigo_libro varchar(50) NOT NULL,
 	version_libro varchar(10) NOT NULL,

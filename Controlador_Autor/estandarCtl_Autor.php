@@ -40,5 +40,49 @@ class estandarCtl_Autor{
 				die('No se pudo agregar');
 			}
 		}
+		if($_REQUEST['accion']=='buscar_id'){
+			$autor = $this->modelo->buscar_por_id($_REQUEST['id']);
+			if(is_array($autor)){
+				//incluir vista
+				include('Vista_Autor/AutorBuscadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se encontro ningun registro con ese ID');
+			}
+		}
+		if($_REQUEST['accion']=='buscar_nombre'){
+			$autor = $this->modelo->buscar_por_nombre($_REQUEST['nom']);
+			if(is_array($autor)){
+				//incluir vista
+				include('Vista_Autor/AutorBuscadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se encontro ningun registro con ese Nombre');
+			}
+		}
+		if($_REQUEST['accion']=='eliminar'){
+			$autor = $this->modelo->eliminar($_REQUEST['id']);
+			if($autor > 0){
+				//incluir vista
+				include('Vista_Autor/AutorEliminadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se pudo eliminar');
+			}
+		}
+		if($_REQUEST['accion']=='actualizar'){
+			$autor = $this->modelo->actualizar($_REQUEST['id'], $_REQUEST['nom']);
+			if($autor > 0){
+				//incluir vista
+				include('Vista_Autor/AutorActualizadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se pudo actualizar');
+			}
+		}
 	}
 }

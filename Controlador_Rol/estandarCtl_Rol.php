@@ -62,5 +62,27 @@ class estandarCtl_Rol{
 				die('No se encontro ningun registro con ese Nombre');
 			}
 		}
+		if($_REQUEST['accion']=='eliminar'){
+			$rol = $this->modelo->eliminar($_REQUEST['id']);
+			if($rol > 0){
+				//incluir vista
+				include('Vista_Rol/RolEliminadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se pudo eliminar');
+			}
+		}
+		if($_REQUEST['accion']=='actualizar'){
+			$rol = $this->modelo->actualizar($_REQUEST['id'], $_REQUEST['nom']);
+			if($rol > 0){
+				//incluir vista
+				include('Vista_Rol/RolActualizadoView.php');
+			}
+			else{
+				//mando a llamar la lista de errores
+				die('No se pudo actualizar');
+			}
+		}
 	}
 }

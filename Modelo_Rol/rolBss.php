@@ -152,4 +152,69 @@ class rolBss{
 		//regreso los productos
 		return $roles;
 	}
+	
+	function eliminar($id_rol){
+		
+		//cargo los datos para la conexion
+		include ('rolClass.php');
+		include ('data_bd.inc');
+
+		//creo mi conexion
+		$conexion = new mysqli($host, $user, $pass, $bd);
+		if($conexion->connect_errno)
+			die('No se pudo conectar a la bd');
+
+		//generar el query
+		$consulta = "DELETE FROM
+				rol
+				WHERE(id_rol='$id_rol'
+					)
+					";
+
+		//Ejecutar el query
+		$conexion -> query($consulta);
+		if($conexion->errno){
+			$conexion -> close();
+			return FALSE;
+		}
+		//saber si se afecto algo
+		$rol = mysqli_affected_rows($conexion);
+		//cierro la conexion
+		$conexion -> close();
+		
+		return $rol;
+	}
+	
+	function actualizar($id_rol, $nombre_rol){
+		
+		//cargo los datos para la conexion
+		include ('rolClass.php');
+		include ('data_bd.inc');
+
+		//creo mi conexion
+		$conexion = new mysqli($host, $user, $pass, $bd);
+		if($conexion->connect_errno)
+			die('No se pudo conectar a la bd');
+
+		//generar el query
+		$consulta = "UPDATE
+				rol
+				SET nombre_rol = '$nombre_rol'
+				WHERE id_rol='$id_rol'
+					";
+
+		//Ejecutar el query
+		$conexion -> query($consulta);
+		if($conexion->errno){
+			$conexion -> close();
+			return FALSE;
+		}
+
+		//saber si se afecto algo
+		$rol = mysqli_affected_rows($conexion);
+		//cierro la conexion
+		$conexion -> close();
+
+		return $rol;
+	}
 }

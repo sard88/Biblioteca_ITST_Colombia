@@ -8,6 +8,7 @@ include('Controlador_Autor/estandarCtl_Autor.php');
 include('Controlador_Estadolibro/estandarCtl_Estadolibro.php');
 include('Controlador_Usuario/estandarCtl_Usuario.php');
 include('Controlador_Prestamo/estandarCtl_Prestamo.php');
+include('Controlador_Libro/estandarCtl_Libro.php');
 
 if(!isset($_REQUEST['controlador'])){
 			echo 'Debe seleccionar 1 opcion :)';
@@ -46,6 +47,11 @@ if($_REQUEST['controlador']=='usuario'){
 if($_REQUEST['controlador']=='prestamo'){
 			//creo controlador y lo ejecuto
 			$controlador = new estandarCtl_Prestamo();
+			$controlador -> ejecutar();
+		}
+if($_REQUEST['controlador']=='libro'){
+			//creo controlador y lo ejecuto
+			$controlador = new estandarCtl_Libro();
 			$controlador -> ejecutar();
 		}
 ?>

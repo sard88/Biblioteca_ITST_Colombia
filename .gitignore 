@@ -1,0 +1,7 @@
+.project
+*.php~
+*.html~
+*.js~
+*.css~
+*.inc
+*.inc~

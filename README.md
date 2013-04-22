@@ -47,3 +47,44 @@ autor y el tema del libro.
 
 //Este documento esta sujeto a verificación y correción tanto de la maestra como del personal del colegio con los 
 cuales tendremos contacto en el transcurso de la semana. Sergio Andrés Rueda y Carlos Andrés Orjuela
+
+MVC
+=================================
+Se tiene una estructura tipo mvc ( modelo vista controlador ) con:
+
+    Controladores
+        *Estándar
+        *Editorial
+        *Estado libro
+        *Libro
+        *Prestamo
+        *Rol
+        *Tema
+        *Usuario
+        *Autor
+        *reservacion
+
+    Modelos
+        *autor
+        *editorial
+        *libro
+        *estadolibro
+        *prestamo
+        *rol
+        *tema
+        *usuario
+
+    Vistas
+        *Vista autor
+        *Vista editorial
+        *Vista estadolibro
+        *Vista libro
+        *Vista Prestamo
+        *Vista Rol
+        *Vista Tema
+        *Vista Usuario
+        
+El controlador estándar tendra los datos de logeo y el inicio de la sesión, así como el logout y la destrucción de la sesión
+aqui tambien se encuentra el controlador que se llamara por default si no se especifica otro.
+
+Se tiene un modelo por cada clase realizada al igual que una vista por cada clase.
